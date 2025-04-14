@@ -1,20 +1,24 @@
 import { getAds } from "./showAdsModel.js";
 import { buildAd } from "./showAdsView.js";
 
-export async function showAdsController() {
+export async function showAdsController(container) {
     
     try {
+        const event = new CustomEvent("ad-loading-started")
+        container.dispatchEvent(event)
         const ads = await getAds()
-        insertAds(ads)
+        insertAds(ads, container)
         
     } catch (error) {
         alert(error.message)
+
+    } finally {
+        const event = new CustomEvent("ad-loading-finished")
+        container.dispatchEvent(event)
     }
 }
 
-function insertAds(ads) {
-
-    const container = document.querySelector('.ads-container')
+function insertAds(ads, container) {
 
     container.innerHTML = ''
 
