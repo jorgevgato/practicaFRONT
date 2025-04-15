@@ -10,8 +10,9 @@ export async function showAdsController(container) {
         insertAds(ads, container)
         
     } catch (error) {
-        alert(error.message)
-
+        const event = new CustomEvent("ad-loading-error", {
+            detail: error.message
+        })
     } finally {
         const event = new CustomEvent("ad-loading-finished")
         container.dispatchEvent(event)
