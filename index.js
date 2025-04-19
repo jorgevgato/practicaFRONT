@@ -20,9 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const errorMessage = event.detail
         showNotification(errorMessage)
     })     
-    
-    
-    
+
     // document.querySelector('.show-ad-button').addEventListener('click', showAdsController)
     showAdsController(container)
 
