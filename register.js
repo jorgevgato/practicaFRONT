@@ -11,5 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const message = event.detail
         showNotification(message)
     })
+
+    registerForm.addEventListener("register-success", (event) => {
+        const message = event.detail
+        showNotification(message)
+    })
+
     registerController(registerForm)
 })

@@ -40,6 +40,10 @@ export const registerController = (form) => {
     const handleCreateUser = async (email, password, form) => {
         try {
             await createUser(email, password)
+            const event = new CustomEvent('register-success', {
+                detail: 'Usuario registrado con éxito.'
+            })
+            form.dispatchEvent(event)
             setTimeout(() => {
                 window.location = "/"
             }, 5000)
