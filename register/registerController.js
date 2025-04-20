@@ -1,3 +1,5 @@
+import { createUser } from "./registerModel.js"
+
 export const registerController = (form) => {
 
     form.addEventListener("submit", (event) => {
@@ -24,7 +26,7 @@ export const registerController = (form) => {
         }
 
         if (errors.length === 0) {
-
+            handleCreateUser(email, password, form)
         } else {
             errors.forEach(error => {
                 const event = new CustomEvent('register-error', {
@@ -34,4 +36,18 @@ export const registerController = (form) => {
             });
         }
     })
+
+    const handleCreateUser = async (email, password, form) => {
+        try {
+            await createUser(email, password)
+            setTimeout(() => {
+                window.location = "/"
+            }, 5000)
+        } catch (error) {
+            const event = new CustomEvent('register-error', {
+                detail: error
+            })
+            form.dispatchEvent(event)
+        }
+    }
 }

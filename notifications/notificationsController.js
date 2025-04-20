@@ -3,7 +3,7 @@ import { buildNotification } from "./notificationsView.js"
 
 export function notificationsController(notifications) {
 
-    const removeNotification = () => {
+    const removeNotification = (newNotification) => {
         newNotification.remove()
     }
 
@@ -17,7 +17,7 @@ export function notificationsController(notifications) {
         const closeButton = newNotification.querySelector("button")
         
         closeButton.addEventListener("click", () => {
-            
+            removeNotification(newNotification)
         })
 
         setTimeout(() => {
