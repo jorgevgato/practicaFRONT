@@ -6,3 +6,7 @@ export const buildAd = (ad) => {
         <p>${ad.price} € - <em>${ad.buySell}</em></p>
     `
 }
+
+export const buildNoAdsWarning = () => {
+    return '<h3>No hay anuncios disponibles.</h3>'
+}

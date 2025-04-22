@@ -1,5 +1,5 @@
 import { getAds } from "./showAdsModel.js";
-import { buildAd } from "./showAdsView.js";
+import { buildAd, buildNoAdsWarning } from "./showAdsView.js";
 
 export async function showAdsController(container) {
     
@@ -13,6 +13,8 @@ export async function showAdsController(container) {
         const event = new CustomEvent("ad-loading-error", {
             detail: error.message
         })
+        container.dispatchEvent(event)
+        
     } finally {
         const event = new CustomEvent("ad-loading-finished")
         container.dispatchEvent(event)
@@ -24,7 +26,7 @@ function insertAds(ads, container) {
     container.innerHTML = ''
 
     if (ads.length === 0) {
-        container.innerHTML = '<h3>No hay anuncios disponibles.</h3>'
+        container.innerHTML = buildNoAdsWarning()
     }
 
     ads.forEach((ad) => {
