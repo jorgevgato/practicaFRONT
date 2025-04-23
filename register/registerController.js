@@ -18,11 +18,11 @@ export const registerController = (form) => {
 
         const emailRegExp = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
         if (!emailRegExp.test(email)) {
-            errors.push('Formato de email incorrecto')
+            errors.push('Error: Formato de email incorrecto.')
         }
 
         if (password !== confirmPassword) {
-            errors.push('Las contraseñas no son iguales')
+            errors.push('Error: Las contraseñas no son iguales.')
         }
 
         if (errors.length === 0) {
