@@ -3,7 +3,7 @@ export const buildAdDetailView = (ad) => {
     const date = new Date(ad.updatedAt)
 
     let adView = `
-        <img src=${ad.image}></img>
+        <img style="max-width:600px" src=${ad.image}></img>
         <p>${ad.name}</p>
         <p>${ad.description}</p>
         <p>${ad.price} € - <em>${ad.buySell}</em></p>
@@ -11,4 +11,11 @@ export const buildAdDetailView = (ad) => {
         <p>${date.toLocaleString()}</p>
     `
     return adView
+}
+
+export const buildRemoveButton = () => {
+    const removeButton = document.createElement("button")
+    removeButton.textContent = "Borrar"
+
+    return removeButton
 }
