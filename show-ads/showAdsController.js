@@ -31,7 +31,7 @@ function insertAds(ads, container) {
 
     ads.forEach((ad) => {
         const adHtml = document.createElement("a")
-        adHtml.setAttribute("class", "ad-main")
+        adHtml.setAttribute("class", "ad-card")
         adHtml.setAttribute("href", `./ad-detail.html?id=${ad.id}`)
         adHtml.innerHTML = buildAd(ad)
         

@@ -2,6 +2,8 @@
 .loader {
     width: 90px;
     height: 14px;
+    margin: 2rem auto;
+    display: block;
     --c:#000 92%,#fff;
     background: 
       radial-gradient(circle 4px at bottom,var(--c)) 0 0,
