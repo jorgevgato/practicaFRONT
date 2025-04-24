@@ -1,4 +1,7 @@
 import { adCreatorController } from "./ad-creator/adCreatorController.js"
+import { loaderController } from "./loader/loaderController.js";
+import { notificationsController } from "./notifications/notificationsController.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const token = localStorage.getItem('token')
@@ -9,5 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const adCreatorForm = document.querySelector('form')
 
-    adCreatorController(adCreatorForm)
+    const loader = document.querySelector('.loader')
+    const { show, hide } = loaderController(loader)
+
+    const notifications = document.querySelector('.notifications')
+    const { showNotification } = notificationsController(notifications)
+
+    adCreatorController(adCreatorForm, show, hide, showNotification)
 })

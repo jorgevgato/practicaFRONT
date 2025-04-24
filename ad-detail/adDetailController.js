@@ -33,6 +33,7 @@ export const adDetailController = async (adContainer, adId) => {
             detail: error.message
         })
         adContainer.dispatchEvent(event)
+        
     } finally {
         const event = new CustomEvent("detail-loading-finished")
         adContainer.dispatchEvent(event)

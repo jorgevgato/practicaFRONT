@@ -12,8 +12,8 @@ export const createAd = async (ad) => {
     })
 
     if (!response.ok) {
-        const data = response.json()
-        throw new Error("No se ha podido crear el anuncio.")
+        const data = await response.json()
+        throw new Error(data.message || "No se ha podido crear el anuncio.")
     }
 
 }
