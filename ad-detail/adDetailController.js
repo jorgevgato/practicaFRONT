@@ -15,6 +15,10 @@ export const adDetailController = async (adContainer, adId) => {
     }
 
     try {
+        const event = new CustomEvent("detail-loading-started")
+        adContainer.dispatchEvent(event)
+        await new Promise(resolve => setTimeout(resolve, 0))
+
         const adDetail = await adDetailModel(adId)
         adContainer.innerHTML = buildAdDetailView(adDetail)
 
@@ -24,8 +28,15 @@ export const adDetailController = async (adContainer, adId) => {
         }
 
     } catch (error) {
-        //enganchar con sistema de errores
-        alert(error.message)
-    }  
+
+        const event = new CustomEvent("detail-loading-error", {
+            detail: error.message
+        })
+        adContainer.dispatchEvent(event)
+    } finally {
+        const event = new CustomEvent("detail-loading-finished")
+        adContainer.dispatchEvent(event)
+    } 
+
 }
 
