@@ -1,15 +1,25 @@
 import { adDetailModel, getLoggedUserInfo, removeAd } from "./adDetailModel.js"
 import { buildAdDetailView, buildRemoveButton } from "./adDetailView.js"
 
-export const adDetailController = async (adContainer, adId) => {
+export const adDetailController = async (adContainer, adId, showNotification) => {
 
     const showRemoveButton = (adId) => {
         const removeButton = buildRemoveButton()
         adContainer.appendChild(removeButton)
 
-        removeButton.addEventListener("click", () => {
+        removeButton.addEventListener("click", async () => {
             if (confirm("¿Quieres borrar el anuncio?")) {
-                removeAd(adId)
+                try {
+                    await removeAd(adId)
+                    showNotification('¡Anuncio borrado!')
+
+                    setTimeout(() => {
+                        window.location = '/'
+                    }, 2000)
+                    
+                } catch (error) {
+                    showNotification(`Error al borrar el anuncio: ${error.message}`)
+                }
             }
         })
     }

@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 5000)
         })   
 
-        adDetailController(adContainer, adId)
+        adDetailController(adContainer, adId, showNotification)
+        
     } else {
         window.location = '/'      
     }

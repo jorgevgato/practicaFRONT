@@ -38,7 +38,6 @@ export const adCreatorController = (form, showLoader, hideLoader, showNotificati
             }, 2000)
             
         } catch (error) {
-            // Conectar con notificación de error para sustituir alert
            showNotification(`Error al crear el anuncio: ${error.message || 'Inténtalo más tarde.'}`)
         
         } finally {

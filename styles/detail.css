@@ -41,7 +41,7 @@ body {
     font-weight: bold;
 }
 
-.ad-container button {
+.ad-container button, .notifications button {
     margin-top: 1rem;
     padding: 0.6rem 1rem;
     background-color: #dc3545;
@@ -58,7 +58,14 @@ body {
 }
 
 .notifications {
+    position: fixed;
+    z-index: 9999;
     text-align: center;
     padding: 1rem;
     color: #555;
+}
+
+.loader {
+    position: fixed;
+    z-index: 9998;
 }
