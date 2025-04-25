@@ -58,14 +58,7 @@ body {
 }
 
 .notifications {
-    position: fixed;
-    z-index: 9999;
     text-align: center;
     padding: 1rem;
     color: #555;
-}
-
-.loader {
-    position: fixed;
-    z-index: 9998;
 }

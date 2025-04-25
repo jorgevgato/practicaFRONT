@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesión</title>
     <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/loader.css">
+    <link rel="stylesheet" href="./styles/notifications.css">
 </head>
 <body>
+
+    <nav>
+    <div class="notifications"></div>
+    <div class="loader hidden"></div>
+
     <form class="login">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="Introduce tu email" required>
@@ -18,6 +25,7 @@
         
         <button type="submit">Iniciar sesión</button>
     </form>
+    </nav>
 
     <script type="module" src="./login.js"></script>
 </body>

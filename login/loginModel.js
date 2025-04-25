@@ -12,7 +12,8 @@ export const loginUser = async (email, password) => {
     })
 
     if (!response.ok) {
-        throw new Error("Error iniciando sesión.")
+        const data = await response.json()
+        throw new Error(data.message || "No se ha podido iniciar sesión.")
     }
 
     const { accessToken } = await response.json()
