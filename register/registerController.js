@@ -1,9 +1,11 @@
 import { createUser } from "./registerModel.js"
 
-export const registerController = (form) => {
+export const registerController = (form, showLoader, hideLoader) => {
 
     form.addEventListener("submit", (event) => {
+
         event.preventDefault()
+        showLoader()
 
         const emailElement = form.querySelector('#email')
         const email = emailElement.value
@@ -34,6 +36,7 @@ export const registerController = (form) => {
                 })
                 form.dispatchEvent(event)
             });
+            hideLoader()
         }
     })
 
@@ -46,12 +49,14 @@ export const registerController = (form) => {
             form.dispatchEvent(event)
             setTimeout(() => {
                 window.location = "/"
-            }, 5000)
+            }, 2000)
         } catch (error) {
             const event = new CustomEvent('register-error', {
                 detail: error
             })
             form.dispatchEvent(event)
+        } finally {
+            hideLoader()
         }
     }
 }

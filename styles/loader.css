@@ -4,7 +4,7 @@
     height: 14px;
     margin: 2rem auto;
     display: block;
-    --c:#000 92%,#fff;
+    --c:#000 92%,#f5f5f5;
     background: 
       radial-gradient(circle 4px at bottom,var(--c)) 0 0,
       radial-gradient(circle 4px at top   ,var(--c)) 0 100%;

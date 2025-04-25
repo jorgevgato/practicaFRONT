@@ -14,7 +14,7 @@ export const createUser = async (email, password) => {
     if (!response.ok) {
         const data = await response.json()
 
-        throw new Error(data.message)
+        throw new Error(data.message || "No se ha podido registrar usuario.")
     }
 
 }
