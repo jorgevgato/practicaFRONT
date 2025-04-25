@@ -21,10 +21,9 @@ h1 {
     z-index: 10;
 }
 
-.notifications {
-    text-align: center;
-    padding: 1rem;
-    color: #555;
+a.ad-card {
+    text-decoration: none;
+    color: black;
 }
 
 .ads-container {
@@ -52,6 +51,7 @@ h1 {
 }
 
 .ad-card img {
+    width: 200px;
     max-width: 100%;
     border-radius: 6px;
     margin-bottom: 1rem;

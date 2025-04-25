@@ -6,37 +6,38 @@
     <title>Crear anuncio</title>
     <link rel="stylesheet" href="./styles/form.css">
     <link rel="stylesheet" href="./styles/loader.css">
+    <link rel="stylesheet" href="./styles/notifications.css">
 </head>
 <body>
     
     <nav>
         <div class="notifications"></div>
-    <div class="loader hidden"></div>
-    <form class="ad-creator">
+        <div class="loader hidden"></div>
+        <form class="ad-creator">
 
-        <label for="name">Nombre del producto</label>
-        <input type="text" name="name" id="name" required>
+            <label for="name">Nombre del producto</label>
+            <input type="text" name="name" id="name" required>
 
-        <label for="description">Descripción</label>
-        <textarea name="description" id="description" maxlength="90" required></textarea>
+            <label for="description">Descripción</label>
+            <textarea name="description" id="description" maxlength="90" required></textarea>
 
-        <label for="price">Precio</label>
-        <input type="number" name="price" id="price" required>
+            <label for="price">Precio</label>
+            <input type="number" name="price" id="price" required>
 
-        <label for="image">Imagen</label>
-        <input type="text" name="image" id="image" placeholder="URL de la imagen" value="./assets/PopLogo.png">
+            <label for="image">Imagen</label>
+            <input type="text" name="image" id="image" placeholder="URL de la imagen" value="./assets/PopLogo.png">
 
-        <fieldset>
-            <legend>Compraventa</legend>
-            <label for="buy">Compra</label>
-            <input type="radio" name="buySell" id="buy" value="Compra">
-            <label for="sell">Venta</label>
-            <input type="radio" name="buySell" id="sell" value="Venta" checked>
-        </fieldset>
+            <fieldset>
+                <legend>Compraventa</legend>
+                <label for="buy">Compra</label>
+                <input type="radio" name="buySell" id="buy" value="Compra">
+                <label for="sell">Venta</label>
+                <input type="radio" name="buySell" id="sell" value="Venta" checked>
+            </fieldset>
 
-        <button type="submit">Publicar</button>
+            <button type="submit">Publicar</button>
 
-    </form>
+        </form>
     </nav>
     
     <script type="module" src="./ad-creator.js"></script>
