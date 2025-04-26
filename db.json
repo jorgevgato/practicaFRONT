@@ -1,0 +1,167 @@
+{
+  "users": [
+    {
+      "username": "user1@example.com",
+      "password": "$2b$10$niNoXXdXYYynJmZOLf1M3O.CakekeL8NguWDYLFUbZC8JwoFqrue6",
+      "id": 1
+    },
+    {
+      "username": "user2@example.com",
+      "password": "$2b$10$HGgMxnwi9Vx1LKML.s/0J.XTiTfe/BlUgvz1RR/rFz20ZdUBiHYsS",
+      "id": 2
+    },
+    {
+      "username": "admin@example.com",
+      "password": "$2b$10$tTfsLHRndWfgSH0Au4/70.PciA6FjVcDgPd5O2doAoR3dBDpqtbbO",
+      "id": 3
+    },
+    {
+      "username": "anonymia@anonymplatform.eu",
+      "password": "$2b$10$C83Hwnm1Rig1zswnwiqrtOpe1hzEkAwhFzptlR8WJL4wrBEAqUwdG",
+      "id": 4
+    },
+    {
+      "username": "user3@example.com",
+      "password": "$2b$10$t00COqw7WdqqGvujJlKheeuHirUQdhP87Dpbo7ZYQRb2QyjotFrEe",
+      "id": 5
+    }
+  ],
+  "tweets": [
+    {
+      "handler": "@usuario1",
+      "date": "2025-04-01T20:03:01.320Z",
+      "message": "Eligendi fugiat veniam a neque omnis doloribus sequi porro expedita ullam excepturi.",
+      "likes": 40
+    },
+    {
+      "handler": "@usuario2",
+      "date": "2025-03-30T20: 03: 01.320Z",
+      "message": "Laborum ad animi officia dolore nisi necessitatibus a porro! Odit!",
+      "likes": 3
+    },
+    {
+      "handler": "@usuario3",
+      "date": "2025-03-29T20: 03: 01.320Z",
+      "message": "Ayer estuve en le parque y me lo pasé genial",
+      "likes": 34
+    },
+    {
+      "handler": "@usuario4",
+      "date": "2025-03-28T0: 03: 01.320Z",
+      "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "likes": 400
+    }
+  ],
+  "ads": [
+    {
+      "name": "Bianchi Padova",
+      "description": "Un rayo partiendo la calzada en dos.",
+      "price": "6000",
+      "image": "https://cdn.deporvillage.com/cdn-cgi/image/h=1800,w=1800,dpr=1,f=auto,q=75,fit=contain,background=white/product/bi-ytb8di-a6_0_00101.jpg",
+      "buySell": "Venta",
+      "userId": 2,
+      "updatedAt": "2025-04-22T16:40:32.885Z",
+      "id": 2
+    },
+    {
+      "name": "Tostadora cool",
+      "description": "Busco una tostadora estilosa, que vista la cocina.",
+      "price": "250",
+      "image": "https://grupoarta.com/cdn/shop/files/TOSTADORANEGRO_1024x1024@2x.jpg?v=1691590523",
+      "buySell": "Compra",
+      "userId": 1,
+      "updatedAt": "2025-04-22T16:48:57.536Z",
+      "id": 3
+    },
+    {
+      "name": "Miguel Porlan Chendo",
+      "description": "Vieja gloria.",
+      "price": "500000",
+      "image": "https://www.footballdatabase.eu/images/photos/players/a_23/23638.jpg",
+      "buySell": "Venta",
+      "userId": 3,
+      "updatedAt": "2025-04-22T18:03:06.421Z",
+      "id": 4
+    },
+    {
+      "name": "iPhone 8",
+      "description": "Reventado.",
+      "price": "11",
+      "image": "./assets/PopLogo.png",
+      "buySell": "Venta",
+      "userId": 2,
+      "updatedAt": "2025-04-23T17:51:20.296Z",
+      "id": 5
+    },
+    {
+      "name": "Kross Unlimited",
+      "description": "¿Quieres hacer el cabra? Elígeme.",
+      "price": "2330",
+      "image": "https://www.tbikes.net/wp-content/uploads/2023/07/Sin-titulo-1-3-1024x768.png",
+      "buySell": "Venta",
+      "userId": 3,
+      "updatedAt": "2025-04-23T18:50:40.144Z",
+      "id": 6
+    },
+    {
+      "name": "Caseta de jardín",
+      "description": "La caseta de siempre, pero con un toque pijo que te volverá loco.",
+      "price": "9500",
+      "image": "https://casetasdejardin24.es/wp-content/uploads/2022/01/Caseta-de-verano-Fargo-B-12m2-35x35-m-44mm.jpg",
+      "buySell": "Venta",
+      "userId": 1,
+      "updatedAt": "2025-04-24T17:02:00.694Z",
+      "id": 7
+    },
+    {
+      "name": "Barquito de pescador",
+      "description": "Sal a pescar tu cena.",
+      "price": "350.000",
+      "image": "https://images.boatsgroup.com/resize/1/79/40/2023-pescador-35-power-9447940-967521012-0-260820241241-0.jpg?w=1028&h=685&t=1725027612000&exact&format=webp",
+      "buySell": "Venta",
+      "userId": 4,
+      "updatedAt": "2025-04-25T17:47:19.754Z",
+      "id": 8
+    },
+    {
+      "name": "Beneteau Oceanis",
+      "description": "Tus veranos nunca volverán a ser lo mismo.",
+      "price": "425.000",
+      "image": "https://images.boatsgroup.com/resize/1/31/2/2008-beneteau-oceanis-46-sail-9703102-20250305064157048-1_XLARGE.jpg?w=1028&h=685&t=1741692305000&exact&format=webp",
+      "buySell": "Venta",
+      "userId": 4,
+      "updatedAt": "2025-04-25T17:50:25.815Z",
+      "id": 9
+    },
+    {
+      "name": "Winston Bogarde",
+      "description": "Jugador de culto para tu Kings League local.",
+      "price": "125.000",
+      "image": "https://fcb-abj-pre.s3.amazonaws.com/img/jugadors/110_bogarde.jpg",
+      "buySell": "Venta",
+      "userId": 3,
+      "updatedAt": "2025-04-25T17:54:10.784Z",
+      "id": 10
+    },
+    {
+      "name": "Regadera",
+      "description": "Riégalas y obsérvalas crecer.",
+      "price": "27",
+      "image": "https://www.nordicnest.es/assets/blobs/house-doctor-regadera-wan-2-l-burdeos/595622-01_42_Env-6f09b8422c.jpeg?preset=tiny&dpr=2",
+      "buySell": "Venta",
+      "userId": 1,
+      "updatedAt": "2025-04-26T18:04:18.081Z",
+      "id": 11
+    },
+    {
+      "name": "Vinoteca",
+      "description": "Para paladear, no para embriagarse sin control.",
+      "price": "3500",
+      "image": "https://www.gunnitrentino.es/v2/wp-content/uploads/2022/12/ICBDEU2450W-door-and-drawers-open_Low_Resolution-2.jpg-1.webp",
+      "buySell": "Venta",
+      "userId": 4,
+      "updatedAt": "2025-04-26T18:09:07.675Z",
+      "id": 12
+    }
+  ]
+}
