@@ -8,9 +8,14 @@ export const sessionController = (container) => {
     container.innerHTML = buildAuthorizedSession()
 
     const logoutButton = container.querySelector('.logout');
+    
     logoutButton.addEventListener("click", () => {
       localStorage.removeItem("token")
-      sessionController(container)
+      
+      setTimeout(() => {
+        window.location = '/'
+      }, 1000)
+    //  sessionController(container)
     })
   } else {
     container.innerHTML = buildUnauthorizedSession()

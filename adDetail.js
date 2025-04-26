@@ -1,6 +1,7 @@
 import { adDetailController } from "./ad-detail/adDetailController.js"
 import { loaderController } from "./loader/loaderController.js";
 import { notificationsController } from "./notifications/notificationsController.js";
+import { sessionController } from "./session/sessionController.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const {show, hide} = loaderController(loader)
     const notifications = document.querySelector(".notifications")
     const {showNotification} = notificationsController(notifications)
+    const session = document.querySelector(".session")
     const searchParams = new URLSearchParams(window.location.search)
     const adId = searchParams.get("id")
 
@@ -29,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 5000)
         })   
 
+        sessionController(session)
         adDetailController(adContainer, adId, showNotification)
         
     } else {
