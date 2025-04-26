@@ -1,6 +1,6 @@
-##frontPOP
+## frontPOP
 
-#Práctica de desarrollo frontend con JavaScript
+# Práctica de desarrollo frontend con JavaScript
 
 Proyecto que simula una página de compraventa de artículos. Se apoya en una Api Rest llamada [sparrest.js](https://github.com/kasappeal/sparrest.js), basada en la utilidad json-server.
 
