@@ -16,7 +16,10 @@ export const adCreatorController = (form, showLoader, hideLoader, showNotificati
         const price = priceElement.value
 
         const imageElement = form.querySelector('#image')
-        const image = imageElement.value
+        let image = imageElement.value
+        if (!image.trim()) {
+            image = "./assets/PopLogo.png"
+        }
 
         const buySellElement = form.querySelector('input[name="buySell"]:checked')
         const buySell = buySellElement.value
